@@ -990,17 +990,17 @@ class BaseDataContext:
         data_asset_type=None,
         batch_parameters=None,
     ) -> DataAsset:
-        """Build a batch of data using batch_kwargs, and return a DataAsset with expectation_suite_name attached. If	
-        batch_parameters are included, they will be available as attributes of the batch.	
-        Args:	
-            batch_kwargs: the batch_kwargs to use; must include a datasource key	
-            expectation_suite_name: The ExpectationSuite or the name of the expectation_suite to get	
-            data_asset_type: the type of data_asset to build, with associated expectation implementations. This can	
-                generally be inferred from the datasource.	
-            batch_parameters: optional parameters to store as the reference description of the batch. They should	
-                reflect parameters that would provide the passed BatchKwargs.	
-        Returns:	
-            DataAsset	
+        """Build a batch of data using batch_kwargs, and return a DataAsset with expectation_suite_name attached. If
+        batch_parameters are included, they will be available as attributes of the batch.
+        Args:
+            batch_kwargs: the batch_kwargs to use; must include a datasource key
+            expectation_suite_name: The ExpectationSuite or the name of the expectation_suite to get
+            data_asset_type: the type of data_asset to build, with associated expectation implementations. This can
+                generally be inferred from the datasource.
+            batch_parameters: optional parameters to store as the reference description of the batch. They should
+                reflect parameters that would provide the passed BatchKwargs.
+        Returns:
+            DataAsset
         """
         if isinstance(batch_kwargs, dict):
             batch_kwargs = BatchKwargs(batch_kwargs)
